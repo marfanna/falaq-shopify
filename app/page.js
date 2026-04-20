@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = { title: 'FALAQ — Fine Dining, Moulvibazar' };
 
@@ -22,7 +23,8 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section style={{ minHeight:'100vh', display:'flex', alignItems:'center', position:'relative', overflow:'hidden', background:'var(--void)' }}>
-        <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse 80% 60% at 50% 40%,rgba(16,38,32,0.6) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 70% 60%,rgba(54,244,164,0.04) 0%,transparent 60%)', pointerEvents:'none' }} />
+        <Image src="/falaq-hero.jpeg" alt="FALAQ restaurant hero" fill style={{ objectFit:'cover', objectPosition:'center' }} priority />
+        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%)', pointerEvents:'none' }} />
         <div className="container" style={{ width:'100%' }}>
           <div style={{ position:'relative', zIndex:1, textAlign:'center', padding:'120px 0 80px' }}>
 
@@ -41,11 +43,14 @@ export default function HomePage() {
               <Link href="/menu" className="btn-ghost">Explore Menu</Link>
             </div>
 
-            {/* Dish strip */}
-            <div className="fade-up fade-up-4" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:2, maxWidth:900, margin:'60px auto 0', borderRadius:16, overflow:'hidden', border:'1px solid var(--border-dark)', boxShadow:'var(--shadow-high)' }}>
-              {['🦐','🥩','🍮'].map(e => (
-                <div key={e} style={{ aspectRatio:'4/3', background:'var(--forest)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:52 }}>{e}</div>
-              ))}
+            {/* Photo strip */}
+            <div className="fade-up fade-up-4" style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:2, maxWidth:900, margin:'60px auto 0', borderRadius:16, overflow:'hidden', border:'1px solid var(--border-dark)', boxShadow:'var(--shadow-high)' }}>
+              <div style={{ position:'relative', aspectRatio:'4/3' }}>
+                <Image src="/falaq-front.jpeg" alt="FALAQ exterior" fill style={{ objectFit:'cover' }} />
+              </div>
+              <div style={{ position:'relative', aspectRatio:'4/3' }}>
+                <Image src="/falaq-inside.jpeg" alt="FALAQ interior" fill style={{ objectFit:'cover' }} />
+              </div>
             </div>
 
             <div className="hero-scroll">
@@ -139,13 +144,12 @@ export default function HomePage() {
                 <Link href="/menu" className="btn-ghost">Our Menu</Link>
               </div>
             </div>
-            <div style={{ background:'var(--forest)', border:'1px solid var(--border-dark)', borderRadius:20, aspectRatio:'4/5', display:'flex', alignItems:'center', justifyContent:'center', fontSize:80, position:'relative', overflow:'hidden', boxShadow:'var(--shadow-card)' }}>
-              <div style={{ position:'absolute', inset:0, background:'radial-gradient(ellipse 80% 60% at 50% 30%,rgba(54,244,164,0.06) 0%,transparent 60%)' }} />
-              👨‍🍳
+            <div style={{ border:'1px solid var(--border-dark)', borderRadius:20, aspectRatio:'4/5', position:'relative', overflow:'hidden', boxShadow:'var(--shadow-card)' }}>
+              <Image src="/falaq-front.jpeg" alt="FALAQ restaurant" fill style={{ objectFit:'cover' }} />
               <div style={{ position:'absolute', bottom:24, left:24, right:24, background:'rgba(0,0,0,0.7)', backdropFilter:'blur(8px)', border:'1px solid var(--border-dark)', borderRadius:12, padding:'16px 20px', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
                 <div>
-                  <div style={{ fontSize:14, color:'var(--white)', fontWeight:500 }}>Head Chef</div>
-                  <div style={{ fontSize:12, color:'var(--neon-green)' }}>FALAQ Kitchen</div>
+                  <div style={{ fontSize:14, color:'var(--white)', fontWeight:500 }}>Est. Moulvibazar</div>
+                  <div style={{ fontSize:12, color:'var(--neon-green)' }}>FALAQ Fine Dining</div>
                 </div>
                 <div style={{ fontFamily:'var(--font-display)', fontSize:28, fontWeight:750, color:'var(--white)' }}>12yr</div>
               </div>
