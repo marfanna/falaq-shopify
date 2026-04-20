@@ -24,17 +24,17 @@ export default function HomePage() {
       {/* Hero */}
       <section style={{ minHeight:'100vh', display:'flex', alignItems:'center', position:'relative', overflow:'hidden', background:'var(--void)' }}>
         <Image src="/falaq-hero.jpeg" alt="FALAQ restaurant hero" fill style={{ objectFit:'cover', objectPosition:'center' }} priority />
-        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%)', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.85) 100%)', pointerEvents:'none' }} />
         <div className="container" style={{ width:'100%' }}>
           <div style={{ position:'relative', zIndex:1, textAlign:'center', padding:'120px 0 80px' }}>
 
             <div className="hero-badge fade-up">Now Open — Moulvibazar&apos;s Premier Fine Dining</div>
 
-            <h1 className="fade-up fade-up-1" style={{ fontFamily:'var(--font-display)', fontSize:'clamp(48px,8vw,96px)', fontWeight:330, lineHeight:1, color:'var(--white)', letterSpacing:'-0.01em', fontFeatureSettings:'"ss03"', marginBottom:'var(--s7)', maxWidth:900, marginLeft:'auto', marginRight:'auto' }}>
-              Where Every Dish Tells<br /><em style={{ fontStyle:'italic', fontWeight:330, color:'var(--muted)' }}>a Story</em>
+            <h1 className="fade-up fade-up-1" style={{ fontFamily:'var(--font-display)', fontSize:'clamp(48px,8vw,96px)', fontWeight:330, lineHeight:1, color:'#FFFFFF', letterSpacing:'-0.01em', fontFeatureSettings:'"ss03"', marginBottom:'var(--s7)', maxWidth:900, marginLeft:'auto', marginRight:'auto', textShadow:'0 2px 12px rgba(0,0,0,0.5)' }}>
+              Where Every Dish Tells<br /><em style={{ fontStyle:'italic', fontWeight:330, color:'#36F4A4' }}>a Story</em>
             </h1>
 
-            <p className="fade-up fade-up-2" style={{ fontSize:20, fontWeight:500, color:'var(--muted)', maxWidth:520, margin:'0 auto var(--s9)', lineHeight:1.5 }}>
+            <p className="fade-up fade-up-2" style={{ fontSize:20, fontWeight:500, color:'#E8F5EE', maxWidth:520, margin:'0 auto var(--s9)', lineHeight:1.5, textShadow:'0 1px 6px rgba(0,0,0,0.4)' }}>
               Contemporary South Asian cuisine crafted with seasonal ingredients and modern technique. An experience unlike any other.
             </p>
 
